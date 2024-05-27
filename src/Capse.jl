@@ -2,8 +2,10 @@ module Capse
 
 using Base: @kwdef
 using Adapt
-using AbstractCosmologicalEmulators
-import AbstractCosmologicalEmulators.get_emulator_description
+using AD_AbstractCosmologicalEmulators
+using Zygote
+using Zygote: @adjoint
+import AD_AbstractCosmologicalEmulators.get_emulator_description
 import JSON.parsefile
 import NPZ.npzread
 
